@@ -19,6 +19,17 @@ test {
     useJUnitPlatform()
 }
 
+
+allure {
+    version = '2.8.1'
+    autoconfigure = true
+    aspectjweaver = true
+    useJUnit5 {
+        version = '2.8.1'
+    }
+}
+
+
 task positive_test(type: Test) {
     useJUnitPlatform {
         includeTags 'positive'
